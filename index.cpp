@@ -6,8 +6,6 @@
 #include <pwd.h>
 #include <unistd.h>
 
-#include "index.h"
-
 using namespace std;
 
 int main(int argc, const char * argv[], char** envp)
