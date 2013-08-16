@@ -18,3 +18,12 @@ string run_cmd(const char * func_name)
 
   return value.str();
 }
+
+void print_env(char** envp)  {
+  char** env;
+  for (env = envp; *env != 0; env++)
+  {
+    char* thisEnv = *env;
+    printf("%s </br>\n", thisEnv);
+  }
+}

@@ -7,3 +7,4 @@
 #include <unistd.h>
 
 std::string run_cmd(const char * func_name);
+void print_env(char** envp);
