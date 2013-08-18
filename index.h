@@ -7,4 +7,19 @@
 #include <unistd.h>
 
 std::string run_cmd(const char * func_name);
-void print_env(char** envp);
+
+class header {
+  private:
+    std::string headers;
+  public:
+    header() {
+      this->set("Content-type: text/html");
+    }
+    void set (const char* header_override) {
+     this->headers = std::string(header_override); 
+    }
+    void print () {
+      std::cout << this->headers;
+      std::cout << "\n\n\n";
+    }
+};
