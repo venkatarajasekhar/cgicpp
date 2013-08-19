@@ -8,11 +8,14 @@
 
 std::string run_cmd(const char * func_name);
 
-class header {
+class Header {
   private:
     std::string headers;
+    static bool instanceFlag;
+    static Header* instance;
   public:
-    header() {
+    static Header* getInstance();
+    Header() {
       this->set("Content-type: text/html");
     }
     void set (const char* header_override) {
@@ -23,3 +26,17 @@ class header {
       std::cout << "\n\n\n";
     }
 };
+
+/*
+bool Header::instanceFlag = false;
+Header* Header::instance = NULL;
+Header* Header::getInstance() {
+  if (!instanceFlag) {
+    instance = new Header();
+    instanceFlag = true;
+    return instance;
+  } 
+  else {
+    return instance;
+  }
+}*/

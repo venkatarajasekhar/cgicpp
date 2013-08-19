@@ -6,8 +6,8 @@ using namespace std;
 int main(int argc, const char * argv[], char** envp)
 {
 
-  header header;
-  header.print();
+  Header Header;
+  Header.print();
   // print_env(envp);
   return 0;
 }
