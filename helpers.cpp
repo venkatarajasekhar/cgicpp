@@ -28,3 +28,15 @@ void print_env(char** envp)  {
   }
 }
 
+bool Header::instanceFlag = false;
+Header* Header::instance = NULL;
+Header* Header::getInstance() {
+  if (!instanceFlag) {
+    instance = new Header();
+    instanceFlag = true;
+    return instance;
+  } 
+  else {
+    return instance;
+  }
+}
