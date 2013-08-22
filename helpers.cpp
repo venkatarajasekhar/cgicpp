@@ -42,7 +42,5 @@ Header* Header::getInstance() {
 }
 
 Header *getHeader() {
-  Header *Header, *H2;
-  Header = Header::getInstance();
-  return Header;
+  return Header::getInstance();
 }
