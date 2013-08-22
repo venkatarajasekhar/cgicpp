@@ -27,3 +27,4 @@ class Header {
       std::cout << "\n\n\n";
     }
 };
+Header *getHeader();

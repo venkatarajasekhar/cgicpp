@@ -40,3 +40,9 @@ Header* Header::getInstance() {
     return instance;
   }
 }
+
+Header *getHeader() {
+  Header *Header, *H2;
+  Header = Header::getInstance();
+  return Header;
+}
