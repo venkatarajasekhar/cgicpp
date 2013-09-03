@@ -7,13 +7,20 @@ using namespace std;
 class db_Table {
   private:
     char filename;
-    char signal;
   public: 
-    db_Table(const char* database, const char* table) {
+    bool signal;
+    db_Table(const char database[], const char* table) {
+      this->signal = false;
     }
 };
 
 int main() {
 
+  db_Table test("db", "table");
+
+  if (test.signal == false) {
+
+  }
+  
   return 0;
 }
