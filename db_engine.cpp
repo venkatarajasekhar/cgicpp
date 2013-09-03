@@ -7,18 +7,22 @@ using namespace std;
 class db_Table {
   private:
     char filename;
+    bool status;
   public: 
-    bool signal;
     db_Table(const char database[], const char* table) {
-      this->signal = false;
+      this->status = false;
+    }
+    bool getStatus() {
+      return this->status;
     }
 };
 
 int main() {
 
-  db_Table test("db", "table");
+  db_Table db("db", "table");
 
-  if (test.signal == false) {
+  if (db.getStatus() == false) {
+    cout << "FAILED";
 
   }
   
