@@ -10,9 +10,10 @@ class db_Table {
     char filename;
     bool status;
   public: 
-    ofstream* db_stream;
+    static ofstream* db_stream;
     db_Table(const char* database, const char* table) {
-      ofstream db_stream(database);
+      ofstream db_stream;
+      db_stream.open(database);
       this->db_stream = &db_stream;
       if (db_stream.is_open()) {
         this->status = true;
@@ -22,7 +23,7 @@ class db_Table {
       }
     }
     ~db_Table() {
-      this->close();
+   //   this->close();
     }
     bool getStatus() {
       return this->status;
@@ -37,8 +38,8 @@ class db_Table {
 int main() {
 
   db_Table db("db", "table");
-  *db.db_stream << "ASD";
-  db.close();
+  //*db.db_stream << "ASD";
+ // db.close();
   
   return 0;
 }
