@@ -1,2 +1,4 @@
  #!/bin/bash
-g++ index.cpp helpers.cpp -o index.cgi
+
+source build.settings
+g++ $corefiles -o index.cgi
